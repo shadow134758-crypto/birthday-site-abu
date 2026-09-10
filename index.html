@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Janona ❤️</title>
+
+<style>
+
+/* =================================
+   ASOSIY
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #8b2864 0%,
+            #3b1233 35%,
+            #160817 70%,
+            #050207 100%
+        );
+}
+
+
+/* =================================
+   ORQA FONDA JANONA
+================================= */
+
+.background-name {
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-8deg);
+
+    font-size:
+        clamp(70px, 19vw, 170px);
+
+    font-weight: 900;
+
+    letter-spacing: 8px;
+
+    white-space: nowrap;
+
+    color:
+        rgba(255, 255, 255, 0.025);
+
+    text-shadow:
+        0 0 15px
+        rgba(255, 80, 150, 0.12),
+
+        0 0 50px
+        rgba(255, 40, 130, 0.10);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =================================
+   FOR YOU
+================================= */
+
+.background-name span {
+
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    white-space: nowrap;
+
+    margin-top: -5px;
+
+    margin-left: 80px;
+
+    color:
+        rgba(255, 255, 255, 0.045);
+
+    text-shadow:
+        0 0 10px
+        rgba(255, 80, 150, 0.15),
+
+        0 0 25px
+        rgba(255, 40, 130, 0.10);
+}
+
+
+/* =================================
+   SAHIFA
+================================= */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+.page.active {
+
+    display: flex;
+
+    animation:
+        pageIn 0.9s ease;
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.96);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.content {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =================================
+   YURAK
+================================= */
+
+.main-heart {
+
+    font-size: 65px;
+
+    margin-bottom: 20px;
+
+    animation:
+        heartBeat 1.8s infinite;
+
+    filter:
+
+        drop-shadow(
+            0 0 12px
+            rgba(255, 50, 130, 0.7)
+        )
+
+        drop-shadow(
+            0 0 30px
+            rgba(255, 30, 120, 0.4)
+        );
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.13);
+    }
+}
+
+
+/* =================================
+   MATNLAR
+================================= */
+
+h1 {
+
+    font-size:
+        clamp(28px, 6vw, 42px);
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px
+        rgba(255,255,255,0.15);
+}
+
+
+p {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,255,255,0.85);
+
+    margin-bottom: 28px;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+button {
+
+    border: none;
+
+    padding:
+        14px 30px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background: white;
+
+    color: #d52d87;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(255,255,255,0.5),
+
+        0 0 35px
+        rgba(255,60,160,0.35);
+
+    transition:
+
+        transform 0.25s ease,
+
+        box-shadow 0.25s ease;
+}
+
+
+button:hover {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(255,255,255,0.7),
+
+        0 0 45px
+        rgba(255,60,160,0.5);
+}
+
+
+button:active {
+
+    transform:
+        scale(0.96);
+}
+
+
+/* =================================
+   XOTIRALAR SAHIFASI
+================================= */
+
+.memory-page {
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+}
+
+.memory-page::-webkit-scrollbar {
+    display: none;
+}
+
+
+.memory-content {
+
+    max-width: 700px;
+
+    padding-top: 20px;
+
+    padding-bottom: 30px;
+}
+
+
+.memory-content h1 {
+
+    margin-bottom: 15px;
+}
+
+
+.memory-content p {
+
+    max-width: 650px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+}
+
+
+/* =================================
+   RASMLAR
+================================= */
+
+.memory-photos {
+
+    width: 100%;
+
+    margin:
+        20px auto 28px;
+}
+
+
+/*
+   1-RASM
+   ASL PROPORSIYASI SAQLANADI
+   HECH QAYERI KESILMAYDI
+*/
+
+.photo-main {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    box-shadow:
+
+        0 0 30px
+        rgba(255,60,160,0.28);
+}
+
+
+/*
+   2 VA 3-RASM
+   ASL KO'RINISHIDA
+*/
+
+.photo-bottom {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: start;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+
+.photo-bottom img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(255,60,160,0.22);
+}
+
+
+/* =================================
+   HA / YO'Q
+================================= */
+
+.choices {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 140px;
+
+    margin-top: 25px;
+}
+
+
+#yesButton {
+
+    position: relative;
+
+    z-index: 10;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+#noButton {
+
+    position: absolute;
+
+    left: 58%;
+
+    top: 65px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    color: #7e315b;
+
+    transition:
+
+        left 0.3s ease,
+
+        top 0.3s ease,
+
+        transform 0.3s ease;
+}
+
+
+/* =================================
+   LETTER
+================================= */
+
+.letter-box {
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    box-shadow:
+
+        0 0 30px
+        rgba(255,60,150,0.12);
+
+    backdrop-filter:
+        blur(10px);
+
+    margin-top: 25px;
+}
+
+
+.letter {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255,255,255,0.9);
+
+    text-align: left;
+}
+
+
+/* =================================
+   CREATED BY ABU
+================================= */
+
+.creator {
+
+    position: fixed;
+
+    right: 12px;
+
+    bottom: 10px;
+
+    z-index: 50;
+
+    font-size: 11px;
+
+    color:
+        rgba(255,255,255,0.55);
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =================================
+   SINGAN YURAKLAR 💔
+================================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    animation:
+        floatHeart linear forwards;
+
+    opacity: 0;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(30px)
+            scale(0.7)
+            rotate(-15deg);
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 0.8;
+    }
+
+    50% {
+
+        transform:
+            translateY(-50vh)
+            scale(1)
+            rotate(10deg);
+
+        opacity: 0.75;
+    }
+
+    80% {
+
+        opacity: 0.6;
+    }
+
+    100% {
+
+        transform:
+            translateY(-100vh)
+            scale(1.1)
+            rotate(25deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =================================
+   TELEFON
+================================= */
+
+@media (max-width: 600px) {
+
+
+    .background-name {
+
+        font-size:
+            clamp(55px, 20vw, 110px);
+
+        letter-spacing: 5px;
+    }
+
+
+    .background-name span {
+
+        font-size: 12px;
+
+        letter-spacing: 4px;
+
+        margin-left: 55px;
+
+        margin-top: -3px;
+    }
+
+
+    .main-heart {
+
+        font-size: 55px;
+
+        margin-bottom: 14px;
+    }
+
+
+    h1 {
+
+        font-size: 29px;
+
+        margin-bottom: 14px;
+    }
+
+
+    p {
+
+        font-size: 15px;
+
+        line-height: 1.55;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* XOTIRA */
+
+    .memory-page {
+
+        align-items: flex-start;
+
+        padding-top: 25px;
+    }
+
+
+    .memory-content {
+
+        max-width: 100%;
+
+        padding-bottom: 35px;
+    }
+
+
+    .memory-content h1 {
+
+        font-size: 27px;
+    }
+
+
+    .memory-content p {
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        margin-bottom: 18px;
+    }
+
+
+    .memory-photos {
+
+        margin-top: 15px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .photo-main {
+
+        width: 100%;
+
+        height: auto;
+
+        border-radius: 16px;
+    }
+
+
+    .photo-bottom {
+
+        gap: 8px;
+
+        margin-top: 8px;
+    }
+
+
+    .photo-bottom img {
+
+        width: 100%;
+
+        height: auto;
+
+        border-radius: 15px;
+    }
+
+
+    button {
+
+        padding:
+            13px 26px;
+
+        font-size: 15px;
+    }
+
+
+    .letter-box {
+
+        padding: 20px;
+    }
+
+
+    .letter {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =================================
+   JUDA KICHIK TELEFON
+================================= */
+
+@media (max-width: 380px) {
+
+
+    .memory-content h1 {
+
+        font-size: 24px;
+    }
+
+
+    .memory-content p {
+
+        font-size: 12px;
+    }
+
+
+    .photo-bottom {
+
+        gap: 6px;
+    }
+
+
+    button {
+
+        padding:
+            11px 22px;
+
+        font-size: 14px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     ORQA FON
+================================= -->
+
+<div class="background-name">
+
+    JANONA
+
+    <span>
+        FOR YOU
+    </span>
+
+</div>
+
+
+<!-- =================================
+     MUSIQA
+================================= -->
+
+<audio
+    id="backgroundMusic"
+    src="love.mp3"
+    loop>
+</audio>
+
+
+<!-- =================================
+     1-SAHIFA
+================================= -->
+
+<section
+    class="page active"
+    id="page1">
+
+    <div class="content">
+
+        <div class="main-heart">
+            ❤️
+        </div>
+
+
+        <h1>
+            Senga bir narsani
+            aytmoqchiman...
+        </h1>
+
+
+        <p>
+            Ba'zi insonlar vaqt o'tgani bilan
+            qalbdan o'chib ketmas ekan.
+        </p>
+
+
+        <button
+            onclick="startAndNext()">
+
+            Ochish ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     2-SAHIFA — XOTIRALAR
+================================= -->
+
+<section
+    class="page memory-page"
+    id="page2">
+
+    <div
+        class="content memory-content">
+
+
+        <div class="main-heart">
+            🥺
+        </div>
+
+
+        <h1>
+            Shu kunlarimiz esingdami?
+        </h1>
+
+
+        <p>
+
+            Bir paytlar shu kunlarni
+            birga o'tkazardik.
+            Birga kulganimiz,
+            gaplashganimiz,
+            oddiygina birga bo'lganimiz
+            ham men uchun juda qadrli edi.
+
+            <br><br>
+
+            Vaqt o'tdi...
+            hayotimiz o'zgardi.
+            Balki o'sha kunlarga
+            qayta olmasmiz.
+
+            <br><br>
+
+            Lekin men u kunlarni
+            hech qachon yomon xotira
+            deb eslamayman. ❤️‍🩹
+
+        </p>
+
+
+        <!-- =================================
+             3 TA RASM
+        ================================= -->
+
+        <div class="memory-photos">
+
+
+            <!-- 1-RASM — TEPADA -->
+
+            <img
+                src="janona1.jpg"
+                class="photo-main"
+                alt="Janona xotira 1">
+
+
+            <!-- 2 VA 3-RASM — PASTDA -->
+
+            <div class="photo-bottom">
+
+
+                <img
+                    src="janona2.jpg"
+                    alt="Janona xotira 2">
+
+
+                <img
+                    src="janona3.jpg"
+                    alt="Janona xotira 3">
+
+
+            </div>
+
+        </div>
+
+
+        <button
+            onclick="nextPage(3)">
+
+            Davom etish ❤️
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     3-SAHIFA
+================================= -->
+
+<section
+    class="page"
+    id="page3">
+
+    <div class="content">
+
+
+        <div class="main-heart">
+            💞
+        </div>
+
+
+        <h1>
+
+            Men seni hali ham
+            yaxshi ko'raman.
+
+        </h1>
+
+
+        <p>
+
+            Balki buni bugun aytmasligim
+            ham mumkin edi.
+
+            <br><br>
+
+            Lekin tug'ilgan kuningda
+            yuragimdagi bu gapni
+            yashirgim kelmadi.
+
+        </p>
+
+
+        <button
+            onclick="nextPage(4)">
+
+            Senchi? 🥺
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     4-SAHIFA
+================================= -->
+
+<section
+    class="page"
+    id="page4">
+
+    <div class="content">
+
+
+        <div class="main-heart">
+            🥺❤️
+        </div>
+
+
+        <h1>
+            Senchi?
+        </h1>
+
+
+        <p>
+            Rostini ayt...
+        </p>
+
+
+        <div class="choices">
+
+
+            <button
+                id="yesButton"
+                onclick="yesAnswer()">
+
+                Ha ❤️
+
+            </button>
+
+
+            <button
+                id="noButton"
+                onclick="runAway()"
+                onmouseover="runAway()"
+                ontouchstart="runAway()">
+
+                Yo'q 🙈
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     5-SAHIFA
+================================= -->
+
+<section
+    class="page"
+    id="page5">
+
+    <div class="content">
+
+
+        <div class="main-heart">
+            ❤️‍🩹
+        </div>
+
+
+        <h1>
+            Men bilardim... ❤️
+        </h1>
+
+
+        <p>
+
+            Balki hozir ikkimiz ham
+            boshqa yo'ldamiz.
+
+            <br><br>
+
+            Oldingi kunlarimizni
+            qaytara olmaymiz.
+
+            <br><br>
+
+            Lekin birga o'tgan kunlarimiz
+            va sendan qolgan xotiralar
+            men uchun doim qadrli
+            bo'lib qoladi.
+
+        </p>
+
+
+        <button
+            onclick="nextPage(6)">
+
+            Yana bir gapim bor... ❤️
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     6-SAHIFA
+================================= -->
+
+<section
+    class="page"
+    id="page6">
+
+    <div class="content">
+
+
+        <div class="main-heart">
+            🎂❤️
+        </div>
+
+
+        <h1>
+
+            Tug'ilgan kuning muborak,
+            Janona!
+
+        </h1>
+
+
+        <p>
+
+            Yangi yoshing baxtli kunlar,
+            chiroyli tabassumlar va
+            qalbing xohlagan barcha
+            yaxshi narsalarga to'la bo'lsin.
+
+            <br><br>
+
+            Har doim baxtli bo'l. ❤️
+
+        </p>
+
+
+        <button
+            onclick="nextPage(7)">
+
+            Senga yozganlarim... 💌
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     7-SAHIFA
+================================= -->
+
+<section
+    class="page"
+    id="page7">
+
+    <div class="content">
+
+
+        <div class="main-heart">
+            💌
+        </div>
+
+
+        <h1>
+
+            Senga aytmoqchi
+            bo'lganlarim...
+
+        </h1>
+
+
+        <div class="letter-box">
+
+
+            <div class="letter">
+
+
+                <!-- ⭐ FAQAT SHU JOYGA O'Z XATINGNI YOZ ⭐ -->
+
+
+                Janona, bu joyga o'zim aytmoqchi
+                bo'lgan gaplarimni yozaman. ❤️
+
+
+                <br><br>
+
+
+                <!-- ⭐ XATINGNI SHU MATN O'RNIGA YOZ ⭐ -->
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     CREATED BY ABU
+================================= -->
+
+<div class="creator">
+
+    Created by Abu ✦
+
+</div>
+
+
+<script>
+
+
+/* =================================
+   MUSIQA
+================================= */
+
+function startAndNext() {
+
+    const music =
+        document.getElementById(
+            "backgroundMusic"
+        );
+
+
+    music.volume = 0.45;
+
+
+    music.play().catch(() => {
+
+        console.log(
+            "Musiqani brauzer boshlata olmadi."
+        );
+
+    });
+
+
+    nextPage(2);
+}
+
+
+/* =================================
+   SAHIFA ALMASHTIRISH
+================================= */
+
+function nextPage(number) {
+
+
+    const pages =
+        document.querySelectorAll(
+            ".page"
+        );
+
+
+    pages.forEach(page => {
+
+        page.classList.remove(
+            "active"
+        );
+
+    });
+
+
+    const next =
+        document.getElementById(
+            "page" + number
+        );
+
+
+    if (next) {
+
+        next.classList.add(
+            "active"
+        );
+
+    }
+
+
+    createHearts(8);
+}
+
+
+/* =================================
+   HA
+================================= */
+
+function yesAnswer() {
+
+    nextPage(5);
+
+    createHearts(20);
+}
+
+
+/* =================================
+   YO'Q QOCHADI 😂
+================================= */
+
+let noCount = 0;
+
+
+function runAway() {
+
+
+    const noButton =
+        document.getElementById(
+            "noButton"
+        );
+
+
+    const yesButton =
+        document.getElementById(
+            "yesButton"
+        );
+
+
+    const choices =
+        document.querySelector(
+            ".choices"
+        );
+
+
+    noCount++;
+
+
+    const messages = [
+
+        "Shoshma 😂",
+
+        "Yo'q tugmasi qochib ketdi 🙈",
+
+        "Buni bosolmaysan 😂",
+
+        "Ha ni bosaver ❤️",
+
+        "Men seni bilaman 😌❤️"
+
+    ];
+
+
+    noButton.innerText =
+        messages[
+            Math.min(
+                noCount - 1,
+                messages.length - 1
+            )
+        ];
+
+
+    const maxX =
+        Math.max(
+            0,
+            choices.clientWidth -
+            noButton.offsetWidth
+        );
+
+
+    const maxY =
+        Math.max(
+            0,
+            choices.clientHeight -
+            noButton.offsetHeight
+        );
+
+
+    const randomX =
+        Math.random() * maxX;
+
+
+    const randomY =
+        Math.random() * maxY;
+
+
+    noButton.style.left =
+        randomX + "px";
+
+
+    noButton.style.top =
+        randomY + "px";
+
+
+    const scale =
+        Math.min(
+            1 + noCount * 0.06,
+            1.35
+        );
+
+
+    yesButton.style.transform =
+        "scale(" + scale + ")";
+
+
+    createHearts(5);
+}
+
+
+/* =================================
+   SINGAN YURAKLAR 💔
+================================= */
+
+function createHearts(
+    amount = 6
+) {
+
+
+    const symbols = [
+
+        "💔",
+        "💔",
+        "💔",
+        "💔",
+        "💔",
+        "💔"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < amount;
+        i++
+    ) {
+
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "floating-heart";
+
+
+        heart.innerText =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() *
+            100 + "vw";
+
+
+        heart.style.top =
+            (
+                80 +
+                Math.random() * 25
+            ) + "vh";
+
+
+        heart.style.fontSize =
+            (
+                12 +
+                Math.random() * 20
+            ) + "px";
+
+
+        heart.style.animationDuration =
+            (
+                5 +
+                Math.random() * 5
+            ) + "s";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 10000);
+
+    }
+
+}
+
+
+/* =================================
+   DOIMIY SINGAN YURAKLAR
+================================= */
+
+setInterval(() => {
+
+    createHearts(3);
+
+}, 1200);
+
+
+/* =================================
+   BOSHLANG'ICH
+================================= */
+
+createHearts(8);
+
+
+</script>
+
+</body>
+</html>
